@@ -1,9 +1,8 @@
 "use client";
 
-import { categoryFilters } from "@/constants";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-
+import { categoryFilters } from "@/constants";
 
 const Categories = () => {
   const router = useRouter();
@@ -18,7 +17,7 @@ const Categories = () => {
 
   return (
     <div className="flexBetween w-full gap-5 flex-wrap">
-      <ul className="flex gap-2 overflow-auto no-scrollbar">
+      <ul className="flex gap-2 overflow-auto">
         {categoryFilters.map((filter) => (
           <button
             key={filter}
